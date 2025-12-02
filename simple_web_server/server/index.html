@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>간단한 웹 서버 테스트</title>
+</head>
+<body>
+    <h1>웹 서버 (GET 및 POST)</h1>
+
+    <h2>1. GET 테스트</h2>
+    <p>이 페이지가 보이면 성공입니다.</p>
+    
+    <h2>2. POST 및 CGI 테스트</h2>
+    <form method="POST" action="/cgi-bin/test_cgi">
+        <label for="data">POST 데이터 (쿼리 문자열):</label>
+        <input type="text" id="data" name="input_data" value="아무거나 입력하세요">
+        <button type="submit">POST 전송</button>
+    </form>
+</body>
+</html>
