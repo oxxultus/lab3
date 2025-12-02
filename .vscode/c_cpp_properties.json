@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                // --- pkg-config --cflags gtk4에서 얻은 정확한 경로들 ---
+                "/usr/include/gtk-3.0",
+                "/usr/include/pango-1.0",
+                "/usr/include/glib-2.0",
+                "/usr/lib/x86_64-linux-gnu/glib-2.0/include",
+                "/usr/include/harfbuzz",
+                "/usr/include/freetype2",
+                "/usr/include/libpng16",
+                "/usr/include/libmount",
+                "/usr/include/blkid",
+                "/usr/include/fribidi",
+                "/usr/include/cairo",
+                "/usr/include/pixman-1",
+                "/usr/include/gdk-pixbuf-2.0",
+                "/usr/include/x86_64-linux-gnu",
+                "/usr/include/webp"
+                // ----------------------------------------------------
+            ],
+            // pkg-config에서 제공된 -mfpmath=sse -msse -msse2 -pthread는 
+            // 컴파일러 플래그이므로, defines 대신 컴파일 시 직접 사용해야 합니다.
+            "defines": [
+                "G_LOG_DOMAIN=\"GTK\"",
+                "GDK_PIXBUF_DISABLE_DEPRECATED",
+                "GTK_DISABLE_SINGLE_INCLUDE",
+                "G_DISABLE_DEPRECATED"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
